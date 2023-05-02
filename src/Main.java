@@ -1,19 +1,17 @@
 public class Main {
 
     public static void main(String[] args) {
-        int b = 923; // рублей, остаток на счете
-        int a = 1863; // рублей, сумма пополнения
-        int min = 1001; //рублей, минимальная для акции сумма пополнения
+        int balance = 923; // рублей, остаток на счете
+        int amount = 1863; // рублей, сумма пополнения
 
         int bonus;
-        if (a >= min) {
-            bonus = a / 100;
-        }
-        else {
+        if (amount >= 1001) {
+            bonus = amount / 100;
+        } else {
             bonus = 0;
         }
-        System.out.println("На Ваш счет поступило " + a + " руб.");
-        System.out.println("Вам начислено " + bonus + " бонусов");
-        System.out.println("На Вашем счету " + (b + a + bonus) + " руб.");
+        System.out.println("На Ваш счет поступило " + amount + " руб.");
+        System.out.println("Вам начислено " + bonus + " бонусов.");
+        System.out.println("На Вашем счете " + (balance + amount + bonus) + " руб.");
     }
 }
